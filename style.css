@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --first-color: #f2550c;
+  --white-color: #e9eaec;
+  --dark-color: #1b1b1b;
+  --dark-color-lighten: #121212;
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #121212;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+h1,p {
+  margin: 0;
+}
+
+.hero h1.ICU {
+  color: var(--dark-color-lighten);
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-height: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
+  gap: 1rem;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: var(--dark-color);
+  border-radius: 1rem;
+  padding: 4rem 2rem 0;
+  color: var(--white-color);
+  overflow-y: hidden;
+}
+
+.card_img {
+  position: absolute;
+  width: 260px;
+  max-height: 155px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card_data {
+  transform: translateY(13.2rem);
+  text-align: center;
+}
+
+.card_title {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin: .5rem;
+}
+
+.card_price {
+  display: inline-block;
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.card_desc {
+  font-size: var(--small-font-size);
+  text-align: initial;
+  margin-bottom: 1.2rem;
+  opacity: 0;
+}
+
+.card_button {
+  display: block;
+  width: max-content;
+  padding: 1.25rem 2rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: .2s;
+  opacity: 0;
+}
+
+.container a:hover {
+  background-color: #c44205;
+}
+
+.card_img, .card_data, .card_title, .card_price, .card_desc {
+  transition: .5s;
+}
+
+.card:hover .card_img {
+  transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+}
+
+.card:hover .card_data {
+  transform: translateY(4.8rem);
+}
+
+.card:hover .card_title {
+  transform: translateX(-2.3rem);
+  margin-bottom: 0;
+}
+
+.card:hover .card_price {
+  transform: translateX(-6.1rem);
+}
+
+.card:hover .card_desc, .card:hover .card_button {
+  transition-delay: .2s;
+  opacity: 1;
+}
+
+
+/* Header/BAR */
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-color-lighten);
+}
+
+nav{
+  display: flex;
+  width: 90.4%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover{
+  color: var(--first-color);
+}
+
+.detel{
+  margin-left: 8%;
+  margin-top: 13%;
+}
+
+.detel h1{
+  font-size: 50px;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.hero span{
+  color: var(--first-color);
+}
+
+.detel p{
+  color: var(--white-color);
+  line-height: 22px;
+}
+
+.detel a{
+  background: var(--white-color);
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--dark-color-lighten);
+  display: inline-block;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.detel a:hover{
+  color: var(--first-color);
+}
+
+.hero a.discord:hover{
+  color: rgb(160, 35, 233);
+}
+
+html {
+  scroll-behavior: smooth;
+}
